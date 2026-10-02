@@ -186,13 +186,13 @@
                     <span
                         class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a href="#servicos" class="hover:text-accent transition-colors duration-300 relative group">
-                    Serviços
+                <a href="#troca-de-oleo" class="hover:text-accent transition-colors duration-300 relative group">
+                    Troca de Óleo
                     <span
                         class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a href="#troca-de-oleo" class="hover:text-accent transition-colors duration-300 relative group">
-                    Troca de Óleo
+                <a href="#servicos" class="hover:text-accent transition-colors duration-300 relative group">
+                    Serviços
                     <span
                         class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
                 </a>
@@ -234,8 +234,8 @@
         <nav id="mobileMenu"
             class="lg:hidden hidden border-t border-white/10 bg-brand-dark/95 px-6 pt-10 pb-6 flex-col gap-1 text-base uppercase tracking-wider font-semibold">
             <a href="#inicio" class="py-3 border-b border-white/10 hover:text-accent transition-colors">Início</a>
-            <a href="#servicos" class="py-3 border-b border-white/10 hover:text-accent transition-colors">Serviços</a>
             <a href="#troca-de-oleo" class="py-3 border-b border-white/10 hover:text-accent transition-colors">Troca de Óleo</a>
+            <a href="#servicos" class="py-3 border-b border-white/10 hover:text-accent transition-colors">Serviços</a>
             <a href="#como-funciona" class="py-3 border-b border-white/10 hover:text-accent transition-colors">Como Funciona</a>
             <a href="#sobre" class="py-3 border-b border-white/10 hover:text-accent transition-colors">Sobre</a>
             <a href="#duvidas" class="py-3 border-b border-white/10 hover:text-accent transition-colors">Dúvidas</a>
@@ -296,7 +296,11 @@
         <div class="absolute inset-0 opacity-[0.07] bg-[radial-gradient(circle_at_1px_1px,_white_1px,_transparent_0)] [background-size:24px_24px] pointer-events-none"></div>
     </section>
 
-    <section aria-label="Destaques" class="relative z-30 -mt-20 px-6 bg-gradient-to-b from-transparent from-50% to-gray-100 to-50%">
+    <section id="troca-de-oleo" class="pt-20 pb-24 bg-gradient-to-br from-brand-dark to-primary relative">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-accent/10 blur-3xl"></div>
+        </div>
+        <div aria-label="Destaques" class="relative z-30 -mt-40 mb-20 px-6">
         <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 lg:divide-x divide-gray-100"
             data-aos="fade-up">
                 <div class="flex items-center gap-4 p-5 md:p-6">
@@ -335,6 +339,83 @@
                         <p class="text-sm text-gray-500 font-medium mt-1">Orçamento pelo WhatsApp</p>
                     </div>
                 </div>
+        </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-sm font-bold text-accent uppercase tracking-widest mb-2">Agende pelo site</h2>
+                    <h3 class="text-4xl font-extrabold text-white">Troca de Óleo</h3>
+                    <p class="mt-4 text-gray-300 leading-relaxed">Preencha os dados, escolha o serviço e envie. A mensagem chega direto no nosso WhatsApp e a equipe confirma o melhor horário para você.</p>
+                    <ul class="hidden lg:block mt-8 space-y-4 text-gray-200">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i>Óleo indicado pelo fabricante do seu veículo</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i>Conferência dos níveis de fluidos sem custo</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i>Atendimento rápido, sem enrolação</li>
+                    </ul>
+                </div>
+
+                <form id="oilForm" novalidate data-aos="fade-left"
+                    class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 space-y-6">
+                    <fieldset>
+                        <legend class="text-sm font-bold text-primary mb-1">Qual serviço você precisa?</legend>
+                        <p class="text-xs text-gray-500 mb-5">Veja o que está incluso em cada opção.</p>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <label class="cursor-pointer relative">
+                                <input type="radio" name="servico" value="Troca de óleo completa" class="peer sr-only" checked>
+                                <div class="h-full rounded-xl border-2 border-gray-200 p-4 pt-6 transition-colors peer-checked:border-brand peer-checked:bg-brand/5 peer-focus-visible:ring-2 peer-focus-visible:ring-accent hover:border-brand/50">
+                                    <span class="absolute -top-3 left-4 bg-accent text-primary text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full shadow"><i class="fa-solid fa-star mr-1"></i>Recomendada</span>
+                                    <div class="flex items-center gap-2">
+                                        <i class="fa-solid fa-oil-can text-brand text-lg"></i>
+                                        <p class="font-bold text-primary leading-tight">Troca de óleo completa</p>
+                                    </div>
+                                    <ul class="mt-3 space-y-1.5 text-sm">
+                                        <li class="flex items-center gap-2 text-gray-700"><i class="fa-solid fa-check text-green-600 w-4"></i>Óleo do motor</li>
+                                        <li class="flex items-center gap-2 text-gray-700"><i class="fa-solid fa-check text-green-600 w-4"></i>Filtro de óleo</li>
+                                        <li class="flex items-center gap-2 text-gray-700"><i class="fa-solid fa-check text-green-600 w-4"></i>Filtro de ar do motor</li>
+                                        <li class="flex items-center gap-2 text-gray-700"><i class="fa-solid fa-check text-green-600 w-4"></i>Filtro de combustível</li>
+                                    </ul>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer relative">
+                                <input type="radio" name="servico" value="Troca de óleo + filtro de óleo" class="peer sr-only">
+                                <div class="h-full rounded-xl border-2 border-gray-200 p-4 pt-6 transition-colors peer-checked:border-brand peer-checked:bg-brand/5 peer-focus-visible:ring-2 peer-focus-visible:ring-accent hover:border-brand/50">
+                                    <div class="flex items-center gap-2">
+                                        <i class="fa-solid fa-filter text-brand text-lg"></i>
+                                        <p class="font-bold text-primary leading-tight">Troca de óleo + filtro de óleo</p>
+                                    </div>
+                                    <ul class="mt-3 space-y-1.5 text-sm">
+                                        <li class="flex items-center gap-2 text-gray-700"><i class="fa-solid fa-check text-green-600 w-4"></i>Óleo do motor</li>
+                                        <li class="flex items-center gap-2 text-gray-700"><i class="fa-solid fa-check text-green-600 w-4"></i>Filtro de óleo</li>
+                                        <li class="flex items-center gap-2 text-gray-400 line-through"><i class="fa-solid fa-xmark w-4"></i>Filtro de ar do motor</li>
+                                        <li class="flex items-center gap-2 text-gray-400 line-through"><i class="fa-solid fa-xmark w-4"></i>Filtro de combustível</li>
+                                    </ul>
+                                </div>
+                            </label>
+                        </div>
+                        <p class="mt-4 text-xs text-gray-600 bg-gray-50 border border-gray-100 rounded-lg p-3 leading-relaxed"><i class="fa-solid fa-circle-info text-brand mr-1"></i>A <strong>troca completa</strong> renova todos os filtros junto com o óleo, deixando o motor protegido por mais tempo. Por isso é a opção que recomendamos.</p>
+                    </fieldset>
+
+                    <div>
+                        <label for="oilNome" class="block text-sm font-bold text-primary mb-2">Nome do cliente</label>
+                        <input id="oilNome" name="nome" type="text" autocomplete="name" required placeholder="Seu nome completo"
+                            class="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-800 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20">
+                    </div>
+
+                    <div>
+                        <label for="oilPlaca" class="block text-sm font-bold text-primary mb-2">Placa do veículo</label>
+                        <input id="oilPlaca" name="placa" type="text" required maxlength="8" placeholder="ABC1D23"
+                            autocapitalize="characters" autocomplete="off"
+                            class="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-800 uppercase tracking-widest focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20">
+                    </div>
+
+                    <p id="oilErro" class="hidden text-sm text-red-600 font-semibold" role="alert"></p>
+
+                    <button type="submit"
+                        class="w-full inline-flex justify-center items-center gap-2 bg-[#25D366] text-white px-6 py-4 rounded-full font-bold text-lg shadow-lg hover:brightness-105 hover:scale-[1.02] active:scale-95 transition-all">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i> Agendar troca de óleo
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -526,69 +607,6 @@
                         <i class="fa-brands fa-whatsapp text-xl"></i> Falar com a equipe
                     </a>
                 </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="troca-de-oleo" class="py-24 bg-gradient-to-br from-brand-dark to-primary relative">
-        <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-accent/10 blur-3xl"></div>
-        </div>
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div data-aos="fade-right">
-                    <h2 class="text-sm font-bold text-accent uppercase tracking-widest mb-2">Agende pelo site</h2>
-                    <h3 class="text-4xl font-extrabold text-white">Troca de Óleo</h3>
-                    <p class="mt-4 text-gray-300 leading-relaxed">Preencha os dados ao lado, escolha o serviço e envie. A mensagem chega direto no nosso WhatsApp e a equipe confirma o melhor horário para você.</p>
-                    <ul class="mt-8 space-y-4 text-gray-200">
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i>Óleo indicado pelo fabricante do seu veículo</li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i>Conferência dos níveis de fluidos sem custo</li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i>Atendimento rápido, sem enrolação</li>
-                    </ul>
-                </div>
-
-                <form id="oilForm" novalidate data-aos="fade-left"
-                    class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 space-y-6">
-                    <fieldset>
-                        <legend class="text-sm font-bold text-primary mb-3">Qual serviço você precisa?</legend>
-                        <div class="grid sm:grid-cols-2 gap-3">
-                            <label class="cursor-pointer">
-                                <input type="radio" name="servico" value="Troca de óleo completa" class="peer sr-only" checked>
-                                <div class="h-full rounded-xl border-2 border-gray-200 p-4 transition-colors peer-checked:border-brand peer-checked:bg-brand/5 peer-focus-visible:ring-2 peer-focus-visible:ring-accent hover:border-brand/50">
-                                    <i class="fa-solid fa-oil-can text-brand text-xl"></i>
-                                    <p class="mt-2 font-bold text-primary">Troca de óleo completa</p>
-                                </div>
-                            </label>
-                            <label class="cursor-pointer">
-                                <input type="radio" name="servico" value="Troca de óleo + filtro de óleo" class="peer sr-only">
-                                <div class="h-full rounded-xl border-2 border-gray-200 p-4 transition-colors peer-checked:border-brand peer-checked:bg-brand/5 peer-focus-visible:ring-2 peer-focus-visible:ring-accent hover:border-brand/50">
-                                    <i class="fa-solid fa-filter text-brand text-xl"></i>
-                                    <p class="mt-2 font-bold text-primary">Troca de óleo + filtro de óleo</p>
-                                </div>
-                            </label>
-                        </div>
-                    </fieldset>
-
-                    <div>
-                        <label for="oilNome" class="block text-sm font-bold text-primary mb-2">Nome do cliente</label>
-                        <input id="oilNome" name="nome" type="text" autocomplete="name" required placeholder="Seu nome completo"
-                            class="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-800 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20">
-                    </div>
-
-                    <div>
-                        <label for="oilPlaca" class="block text-sm font-bold text-primary mb-2">Placa do veículo</label>
-                        <input id="oilPlaca" name="placa" type="text" required maxlength="8" placeholder="ABC1D23"
-                            autocapitalize="characters" autocomplete="off"
-                            class="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-800 uppercase tracking-widest focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20">
-                    </div>
-
-                    <p id="oilErro" class="hidden text-sm text-red-600 font-semibold" role="alert"></p>
-
-                    <button type="submit"
-                        class="w-full inline-flex justify-center items-center gap-2 bg-[#25D366] text-white px-6 py-4 rounded-full font-bold text-lg shadow-lg hover:brightness-105 hover:scale-[1.02] active:scale-95 transition-all">
-                        <i class="fa-brands fa-whatsapp text-2xl"></i> Agendar troca de óleo
-                    </button>
-                </form>
             </div>
         </div>
     </section>

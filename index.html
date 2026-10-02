@@ -1045,7 +1045,10 @@
 
             const texto = `Olá! Vim pelo site e gostaria de agendar uma troca de óleo.\n\n` +
                 `*Serviço:* ${servico}\n*Nome:* ${nome}\n*Placa:* ${placa}`;
-            if (window.fbq) fbq('track', 'Lead', { content_name: servico });
+            if (window.fbq) {
+                fbq('track', 'Lead', { content_name: servico });
+                fbq('track', 'Contact', { content_name: servico });
+            }
             window.open('https://api.whatsapp.com/send/?phone=5566992057459&text=' + encodeURIComponent(texto), '_blank', 'noopener');
         });
     </script>

@@ -26,6 +26,26 @@
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-P6VLNQ9Z');</script>
+    <!-- Meta Pixel -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1657808168591067');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1657808168591067&ev=PageView&noscript=1" alt=""></noscript>
+    <!-- End Meta Pixel -->
+
     <link rel="icon" type="image/png" sizes="64x64" href="Logo_betao_toposite.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1003,6 +1023,11 @@
             link.addEventListener('click', () => toggleMenu(true));
         });
 
+        // Meta Pixel: clique em qualquer botão de WhatsApp conta como Contato
+        document.querySelectorAll('a[href*="api.whatsapp.com"], a[href*="wa.me/"]').forEach(link => {
+            link.addEventListener('click', () => { if (window.fbq) fbq('track', 'Contact'); });
+        });
+
         // Formulário de troca de óleo -> WhatsApp
         document.getElementById('oilForm').addEventListener('submit', function (e) {
             e.preventDefault();
@@ -1020,6 +1045,7 @@
 
             const texto = `Olá! Vim pelo site e gostaria de agendar uma troca de óleo.\n\n` +
                 `*Serviço:* ${servico}\n*Nome:* ${nome}\n*Placa:* ${placa}`;
+            if (window.fbq) fbq('track', 'Lead', { content_name: servico });
             window.open('https://api.whatsapp.com/send/?phone=5566992057459&text=' + encodeURIComponent(texto), '_blank', 'noopener');
         });
     </script>

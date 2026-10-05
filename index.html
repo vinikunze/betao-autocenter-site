@@ -194,6 +194,10 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <header
         class="fixed w-full bg-brand-dark/85 backdrop-blur-md text-white border-b border-white/10 z-50 transition-all duration-300">
+        <a href="#troca-de-oleo"
+            class="relative z-20 block bg-primary text-gray-200 text-xs sm:text-sm font-medium text-center px-4 py-1.5 whitespace-nowrap overflow-hidden text-ellipsis hover:text-white transition-colors">
+            Outubro: troca de óleo em até 4x sem juros. <span class="text-accent font-bold underline underline-offset-2">Ver oferta</span>
+        </a>
         <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
             <div class="flex items-center gap-3">
                 <img src="logo-betao.webp" alt="Betão Auto Center" width="160" height="160"
@@ -316,11 +320,40 @@
         <div class="absolute inset-0 opacity-[0.07] bg-[radial-gradient(circle_at_1px_1px,_white_1px,_transparent_0)] [background-size:24px_24px] pointer-events-none"></div>
     </section>
 
-    <section id="troca-de-oleo" class="pt-20 pb-24 bg-gradient-to-br from-brand-dark to-primary relative">
+    <section id="agendar-troca-de-oleo" class="pt-20 pb-24 bg-gradient-to-br from-brand-dark to-primary relative">
         <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
             <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-accent/10 blur-3xl"></div>
         </div>
-        <div aria-label="Destaques" class="relative z-30 -mt-40 mb-20 px-6">
+        <section id="troca-de-oleo" aria-label="Oferta de outubro: troca de óleo em até 4x sem juros"
+            class="relative z-30 -mt-40 mb-12 px-6 scroll-mt-32">
+            <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl border-t-4 border-accent p-6 md:p-10 grid lg:grid-cols-[1fr_auto] gap-6 lg:gap-12 items-center">
+                <div>
+                    <span class="inline-flex items-center gap-2 bg-accent text-primary text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full">
+                        <i class="fa-solid fa-bolt"></i> Só em outubro
+                    </span>
+                    <h2 class="mt-4 text-3xl md:text-4xl font-extrabold text-primary leading-tight">
+                        Troca de óleo completa em até <span class="text-brand">4x sem juros</span>
+                    </h2>
+                    <p class="mt-3 text-gray-600 text-base md:text-lg leading-relaxed">No cartão de crédito. Linha leve, SUV, caminhonetes e diesel.</p>
+                    <p class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-brand-dark">
+                        <i class="fa-regular fa-calendar-check text-brand"></i> Oferta válida até 31/10
+                    </p>
+                </div>
+                <div class="flex flex-col gap-3 lg:w-80">
+                    <a href="https://api.whatsapp.com/send/?phone=5566992057459&text=Ol%C3%A1%21+Vim+pelo+an%C3%BAncio+da+troca+de+%C3%B3leo+em+4x+e+gostaria+de+um+or%C3%A7amento."
+                        target="_blank" rel="noopener"
+                        class="w-full inline-flex justify-center items-center gap-2 bg-[#25D366] text-white px-6 py-4 rounded-full font-bold text-base sm:text-lg shadow-lg hover:brightness-105 hover:scale-[1.02] active:scale-95 transition-all">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i> Quero meu orçamento no WhatsApp
+                    </a>
+                    <a href="#oilForm"
+                        class="w-full inline-flex justify-center items-center gap-2 border-2 border-brand text-brand px-6 py-3 rounded-full font-bold hover:bg-brand hover:text-white transition-colors">
+                        <i class="fa-regular fa-calendar"></i> Agendar pelo site
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div aria-label="Destaques" class="relative z-30 mb-20 px-6">
         <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 lg:divide-x divide-gray-100"
             data-aos="fade-up">
                 <div class="flex items-center gap-4 p-5 md:p-6">
@@ -375,7 +408,7 @@
                 </div>
 
                 <form id="oilForm" novalidate data-aos="fade-left"
-                    class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 space-y-6">
+                    class="scroll-mt-32 bg-white rounded-2xl shadow-2xl p-6 md:p-8 space-y-6">
                     <fieldset>
                         <legend class="text-sm font-bold text-primary mb-1">Qual serviço você precisa?</legend>
                         <p class="text-xs text-gray-500 mb-5">Veja o que está incluso em cada opção.</p>
@@ -1049,6 +1082,8 @@
                 fbq('track', 'Lead', { content_name: servico });
                 fbq('track', 'Contact', { content_name: servico });
             }
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ event: 'oil_form_submit' });
             window.open('https://api.whatsapp.com/send/?phone=5566992057459&text=' + encodeURIComponent(texto), '_blank', 'noopener');
         });
     </script>

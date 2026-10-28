@@ -211,6 +211,11 @@
                     <span
                         class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
                 </a>
+                <a href="#orcamento" class="hover:text-accent transition-colors duration-300 relative group">
+                    Orçamento
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+                </a>
                 <a href="#como-funciona" class="hover:text-accent transition-colors duration-300 relative group">
                     Como Funciona
                     <span
@@ -250,6 +255,7 @@
             class="lg:hidden hidden border-t border-white/10 bg-brand-dark/95 px-6 pt-10 pb-6 flex-col gap-1 text-base uppercase tracking-wider font-semibold">
             <a href="#inicio" class="py-3 border-b border-white/10 hover:text-accent transition-colors">Início</a>
             <a href="#servicos" class="py-3 border-b border-white/10 hover:text-accent transition-colors">Serviços</a>
+            <a href="#orcamento" class="py-3 border-b border-white/10 hover:text-accent transition-colors">Orçamento</a>
             <a href="#como-funciona" class="py-3 border-b border-white/10 hover:text-accent transition-colors">Como Funciona</a>
             <a href="#sobre" class="py-3 border-b border-white/10 hover:text-accent transition-colors">Sobre</a>
             <a href="#duvidas" class="py-3 border-b border-white/10 hover:text-accent transition-colors">Dúvidas</a>
@@ -349,6 +355,106 @@
                         <p class="text-sm text-gray-500 font-medium mt-1">Orçamento pelo WhatsApp</p>
                     </div>
                 </div>
+        </div>
+    </section>
+
+    <section id="orcamento" class="pt-16 pb-8 bg-gray-100 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="bg-white rounded-2xl shadow-xl border-t-4 border-accent p-6 md:p-10 grid lg:grid-cols-5 gap-8 lg:gap-12">
+                <div class="lg:col-span-2">
+                    <h2 class="text-sm font-bold text-brand uppercase tracking-widest mb-2">Orçamento rápido</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-primary leading-tight">Conte o que o seu carro precisa</h3>
+                    <p class="mt-4 text-gray-600 leading-relaxed">Escolha o serviço, preencha seus dados e envie. A mensagem chega no nosso WhatsApp e a equipe responde com o orçamento.</p>
+                    <ul class="hidden lg:block mt-6 space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-brand mt-1"></i>Diagnóstico claro e orçamento detalhado</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-brand mt-1"></i>O serviço só começa com a sua aprovação</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-brand mt-1"></i>Nota 5.0 no Google</li>
+                    </ul>
+                </div>
+
+                <form id="orcamentoForm" novalidate class="lg:col-span-3 space-y-6">
+                    <fieldset>
+                        <legend class="text-sm font-bold text-primary mb-3">Qual serviço você precisa?</legend>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="servico" value="Motor" class="peer sr-only">
+                                <span class="h-full flex flex-col items-center justify-center gap-1.5 text-center rounded-xl border-2 border-gray-200 px-2 py-3 text-sm font-bold text-primary transition-colors peer-checked:border-brand peer-checked:bg-brand/5 peer-focus-visible:ring-2 peer-focus-visible:ring-accent hover:border-brand/50">
+                                    <i class="fa-solid fa-gears text-brand text-lg"></i>Motor
+                                </span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="servico" value="Troca de óleo" class="peer sr-only">
+                                <span class="h-full flex flex-col items-center justify-center gap-1.5 text-center rounded-xl border-2 border-gray-200 px-2 py-3 text-sm font-bold text-primary transition-colors peer-checked:border-brand peer-checked:bg-brand/5 peer-focus-visible:ring-2 peer-focus-visible:ring-accent hover:border-brand/50">
+                                    <i class="fa-solid fa-oil-can text-brand text-lg"></i>Troca de óleo
+                                </span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="servico" value="Pneus" class="peer sr-only">
+                                <span class="h-full flex flex-col items-center justify-center gap-1.5 text-center rounded-xl border-2 border-gray-200 px-2 py-3 text-sm font-bold text-primary transition-colors peer-checked:border-brand peer-checked:bg-brand/5 peer-focus-visible:ring-2 peer-focus-visible:ring-accent hover:border-brand/50">
+                                    <i class="fa-solid fa-circle-dot text-brand text-lg"></i>Pneus
+                                </span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="servico" value="Alinhamento 3D" class="peer sr-only">
+                                <span class="h-full flex flex-col items-center justify-center gap-1.5 text-center rounded-xl border-2 border-gray-200 px-2 py-3 text-sm font-bold text-primary transition-colors peer-checked:border-brand peer-checked:bg-brand/5 peer-focus-visible:ring-2 peer-focus-visible:ring-accent hover:border-brand/50">
+                                    <i class="fa-solid fa-crosshairs text-brand text-lg"></i>Alinhamento 3D
+                                </span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="servico" value="Balanceamento" class="peer sr-only">
+                                <span class="h-full flex flex-col items-center justify-center gap-1.5 text-center rounded-xl border-2 border-gray-200 px-2 py-3 text-sm font-bold text-primary transition-colors peer-checked:border-brand peer-checked:bg-brand/5 peer-focus-visible:ring-2 peer-focus-visible:ring-accent hover:border-brand/50">
+                                    <i class="fa-solid fa-scale-balanced text-brand text-lg"></i>Balanceamento
+                                </span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="servico" value="Suspensão" class="peer sr-only">
+                                <span class="h-full flex flex-col items-center justify-center gap-1.5 text-center rounded-xl border-2 border-gray-200 px-2 py-3 text-sm font-bold text-primary transition-colors peer-checked:border-brand peer-checked:bg-brand/5 peer-focus-visible:ring-2 peer-focus-visible:ring-accent hover:border-brand/50">
+                                    <i class="fa-solid fa-car-burst text-brand text-lg"></i>Suspensão
+                                </span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="servico" value="Freios" class="peer sr-only">
+                                <span class="h-full flex flex-col items-center justify-center gap-1.5 text-center rounded-xl border-2 border-gray-200 px-2 py-3 text-sm font-bold text-primary transition-colors peer-checked:border-brand peer-checked:bg-brand/5 peer-focus-visible:ring-2 peer-focus-visible:ring-accent hover:border-brand/50">
+                                    <i class="fa-solid fa-circle-stop text-brand text-lg"></i>Freios
+                                </span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="servico" value="Outro" class="peer sr-only">
+                                <span class="h-full flex flex-col items-center justify-center gap-1.5 text-center rounded-xl border-2 border-gray-200 px-2 py-3 text-sm font-bold text-primary transition-colors peer-checked:border-brand peer-checked:bg-brand/5 peer-focus-visible:ring-2 peer-focus-visible:ring-accent hover:border-brand/50">
+                                    <i class="fa-solid fa-screwdriver-wrench text-brand text-lg"></i>Outro
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="orcNome" class="block text-sm font-bold text-primary mb-2">Seu nome</label>
+                            <input id="orcNome" name="nome" type="text" autocomplete="name" required placeholder="Nome completo"
+                                class="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-800 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20">
+                        </div>
+                        <div>
+                            <label for="orcPlaca" class="block text-sm font-bold text-primary mb-2">Placa do veículo</label>
+                            <input id="orcPlaca" name="placa" type="text" required maxlength="8" placeholder="ABC1D23"
+                                autocapitalize="characters" autocomplete="off"
+                                class="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-800 uppercase tracking-widest focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="orcDetalhes" class="block text-sm font-bold text-primary mb-2">O que está acontecendo com o carro? <span class="font-normal text-gray-500">(opcional)</span></label>
+                        <textarea id="orcDetalhes" name="detalhes" rows="3" maxlength="500" placeholder="Ex.: barulho ao frear, carro puxando para o lado, luz acesa no painel..."
+                            class="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-800 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20"></textarea>
+                    </div>
+
+                    <p id="orcErro" class="hidden text-sm text-red-600 font-semibold" role="alert"></p>
+
+                    <button type="submit"
+                        class="w-full inline-flex justify-center items-center gap-2 bg-[#25D366] text-white px-6 py-4 rounded-full font-bold text-base sm:text-lg shadow-lg hover:brightness-105 hover:scale-[1.02] active:scale-95 transition-all">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i> Pedir orçamento no WhatsApp
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -993,6 +1099,36 @@
         // Meta Pixel: clique em qualquer botão de WhatsApp conta como Contato
         document.querySelectorAll('a[href*="api.whatsapp.com"], a[href*="wa.me/"]').forEach(link => {
             link.addEventListener('click', () => { if (window.fbq) fbq('track', 'Contact'); });
+        });
+
+        // Formulário de orçamento -> WhatsApp
+        document.getElementById('orcamentoForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const servicoMarcado = this.querySelector('input[name="servico"]:checked');
+            const servico = servicoMarcado ? servicoMarcado.value : '';
+            const nome = this.nome.value.trim();
+            const placa = this.placa.value.trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
+            const detalhes = this.detalhes.value.trim();
+            const erro = document.getElementById('orcErro');
+
+            let msg = '';
+            if (!servico) msg = 'Escolha o serviço que você precisa.';
+            else if (!nome) msg = 'Informe o seu nome.';
+            else if (!/^[A-Z]{3}[0-9][A-Z0-9][0-9]{2}$/.test(placa)) msg = 'Informe uma placa válida (ex.: ABC1D23 ou ABC1234).';
+            erro.textContent = msg;
+            erro.classList.toggle('hidden', !msg);
+            if (msg) return;
+
+            const texto = `${WA_ORIGENS[waOrigem].prefixo} e gostaria de um orçamento.\n\n` +
+                `*Serviço:* ${servico}\n*Nome:* ${nome}\n*Placa:* ${placa}` +
+                (detalhes ? `\n*O que está acontecendo:* ${detalhes}` : '');
+            if (window.fbq) {
+                fbq('track', 'Lead', { content_name: servico });
+                fbq('track', 'Contact', { content_name: servico });
+            }
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ event: 'orcamento_form_submit', servico: servico });
+            window.open('https://api.whatsapp.com/send/?phone=5566992057459&text=' + encodeURIComponent(texto), '_blank', 'noopener');
         });
 
     </script>
